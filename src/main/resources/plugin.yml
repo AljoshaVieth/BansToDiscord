@@ -1,0 +1,8 @@
+name: BansToDiscord
+version: 1.0
+description: Displays ban and kick messages on discord
+author: c0din
+website: https://c0din.de/
+main: de.c0din.banstodiscord.BansToDiscord
+api-version: 1.13
+commands:

@@ -1,0 +1,18 @@
+messages:
+  # The message displayed on Discord when a player is banned. %player% will be replaced by the name of the banned player.
+  banned: "%player% has been banished"
+
+  #The message displayed on Discord when a player is kicked. %player% will be replaced by the name of the kicked player.
+  kicked: "%player% has been kicked"
+
+  #The color of the message on Discord
+  color: "#DC3023"
+
+
+discord:
+  #Your bot token.
+  token: ""
+
+  #You can get a channel-id by activating the developer settings in Discord and right-clicking on the channel
+  ban-channel: ""
+  kick-channel: ""
