@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 /** Created by Aljosha on 22.02.2019 */
 public class BansToDiscord extends JavaPlugin {
-  private JDA api;
+  private JDA jda;
   static BansToDiscord instance;
   static final Logger log = Logger.getLogger("Minecraft");
 
@@ -21,7 +21,7 @@ public class BansToDiscord extends JavaPlugin {
     PluginManager pluginManager = Bukkit.getPluginManager();
     String token = getConfig().getString("discord.token");
     try {
-      api = new JDABuilder(token).build();
+      jda = new JDABuilder(token).build();
     } catch (LoginException e) {
       log.severe(String.format("[%s] - Disabled, since no connection to Discord could be established! Please check the config.yml", getDescription().getName()));
       pluginManager.disablePlugin(this);
@@ -31,7 +31,7 @@ public class BansToDiscord extends JavaPlugin {
     }
   }
 
-  JDA getApi() {
-    return api;
+  JDA getJda() {
+    return jda;
   }
 }
